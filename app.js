@@ -1,9 +1,17 @@
-function isPalindrome(str) {
-  let normalized = str.toLowerCase().replace(/[^a-z0-9]/g, "");
+function fizzBuzz(int) {
+  let result = [];
 
-  let reversedNormalizedStr = normalized.split("").reverse().join("");
+  for (let i = 1; i <= int; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+      result.push("FizzBuzz");
+    } else if (i % 3 === 0) {
+      result.push("Fizz");
+    } else if (i % 5 === 0) {
+      result.push("Buzz");
+    } else {
+      result.push(i.toString());
+    }
+  }
 
-  return normalized === reversedNormalizedStr;
+  return result;
 }
-
-console.log(isPalindrome("racecar"));
