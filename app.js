@@ -15,3 +15,17 @@ function fizzBuzz(int) {
 
   return result;
 }
+
+function findLongestWord(str) {
+  let longestStr = "";
+
+  let words = str.split(" ");
+
+  for (let i = 0; i < words.length; i++) {
+    if (words[i].length > longestStr.length) {
+      longestStr = words[i];
+    }
+  }
+
+  return longestStr;
+}
